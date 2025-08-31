@@ -1,46 +1,60 @@
-# UART RTL and UVM Verification Environment
+UART RTL and UVM Verification Environment
+Overview
 
-## Overview
-This repository contains a UART (Universal Asynchronous Receiver/Transmitter) design in Verilog along with a complete UVM-based verification environment in SystemVerilog. The project demonstrates constrained-random verification, functional coverage, and self-checking testbenches for a robust UART IP.
+This repository contains a UART (Universal Asynchronous Receiver/Transmitter) design in Verilog along with a complete UVM-based verification environment in SystemVerilog.
+The project demonstrates constrained-random verification, self-checking testbenches, and functional coverage for robust UART IP validation.
 
-## Repository Structure
-- `uart.v` : UART RTL (Verilog)
-- `uart_if.sv` : UART interface (SystemVerilog)
-- `uart_driver.sv` : UVM driver
-- `uart_monitor.sv` : UVM monitor
-- `uart_scoreboard.sv` : UVM scoreboard
-- `uart_sequence.sv` : UVM sequence
-- `uart_env.sv` : UVM environment
-- `uart_env_test.sv` : UVM test class
-- `uart_tb.sv` : Top-level testbench
+Repository Structure
+File	Description
+uart.v	UART RTL design (Verilog)
+uart_if.sv	UART interface (SystemVerilog)
+uart_driver.sv	UVM driver for generating transactions
+uart_monitor.sv	UVM monitor for observing DUT signals
+uart_scoreboard.sv	UVM scoreboard for checking correctness
+uart_sequence.sv	UVM sequence defining constrained-random test scenarios
+uart_env.sv	UVM environment integrating driver, monitor, and scoreboard
+uart_env_test.sv	UVM test class to run sequences
+uart_tb.sv	Top-level testbench (clock/reset, DUT instantiation, starts UVM)
+Features
 
-## Features
-- UART transmitter and receiver implementation
-- UVM environment with driver, monitor, sequence, and scoreboard
-- Constrained-random test generation
-- Self-checking testbenches
-- Functional coverage for TX/RX operations
-- Compatible with standard simulators like ModelSim and QuestaSim
+UART transmitter and receiver implementation
 
-## Getting Started
-1. Clone the repository:
-   ```bash
-   git clone <repository_url>
-2. Compile all RTL and UVM files with your simulator.
+Full UVM verification environment with driver, monitor, sequence, and scoreboard
 
-3. Run the testbench (uart_tb.sv) to start the verification environment.
+Constrained-random test generation for corner-case validation
 
+Self-checking testbenches with assertions
 
-## Usage
-- Modify `uart_sequence.sv` to add or change test scenarios.
-- Use coverage reports to check functional completeness.
-- Add additional monitors or scoreboards if extending the environment.
-## Note
-Simulation:
-The complete UVM-based verification environment can be simulated using a UVM-enabled SystemVerilog simulator (e.g., QuestaSim, VCS). Simulation files are included in the repository; simulation results will be added once the local setup is fully operational.
+Functional coverage for TX/RX operations
+
+Compatible with UVM-enabled SystemVerilog simulators (ModelSim, QuestaSim, VCS)
+
+Getting Started
+
+Clone the repository:
+
+git clone <repository_url>
 
 
-## Author
+Compile all RTL and UVM files with a UVM-enabled SystemVerilog simulator.
+
+Run the top-level testbench (uart_tb.sv) to start the verification environment.
+
+Usage
+
+Modify uart_sequence.sv to add or change test scenarios.
+
+Use functional coverage reports to check completeness.
+
+Extend the environment by adding additional monitors or scoreboards if needed.
+
+Simulation
+
+Note: Simulation requires a UVM-enabled SystemVerilog simulator (QuestaSim, ModelSim, VCS).
+Simulation files are included in the repository; simulation results will be added once the local setup is fully operational.
+
+Author
+
 Aditi Vishal Paunikar
 
 Email: aditivpaunikar@gmail.com
