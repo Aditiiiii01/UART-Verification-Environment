@@ -36,8 +36,14 @@ Modify uart_sequence.sv to add or change test scenarios.
 Use coverage reports to check functional completeness.
 
 Add additional monitors or scoreboards if extending the environment.
+## Note
+Simulation:
+The complete UVM-based verification environment can be simulated using a UVM-enabled SystemVerilog simulator (e.g., QuestaSim, VCS). Simulation files are included in the repository; simulation results will be added once the local setup is fully operational.
 
-Author
+
+## Author
 Aditi Vishal Paunikar
+
 Email: aditivpaunikar@gmail.com
+
 LinkedIn: linkedin.com/in/aditi-vishal-paunikar-9ba789259
