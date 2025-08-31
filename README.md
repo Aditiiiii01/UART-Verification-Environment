@@ -30,7 +30,7 @@ This repository contains a UART (Universal Asynchronous Receiver/Transmitter) de
 
 3. Run the testbench (uart_tb.sv) to start the verification environment.
 
-```markdown
+
 ## Usage
 - Modify `uart_sequence.sv` to add or change test scenarios.
 - Use coverage reports to check functional completeness.
