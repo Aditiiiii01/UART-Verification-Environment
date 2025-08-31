@@ -26,9 +26,9 @@ This repository contains a UART (Universal Asynchronous Receiver/Transmitter) de
 1. Clone the repository:
    ```bash
    git clone <repository_url>
-Compile all RTL and UVM files with your simulator.
+2. Compile all RTL and UVM files with your simulator.
 
-Run the testbench (uart_tb.sv) to start the verification environment.
+3. Run the testbench (uart_tb.sv) to start the verification environment.
 
 Usage
 Modify uart_sequence.sv to add or change test scenarios.
